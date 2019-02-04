@@ -477,12 +477,6 @@ fill-range@^4.0.0:
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
 
-flyd@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/flyd/-/flyd-0.2.8.tgz#26b606a051431ec275dd7ca2cb5fb61756fcd7f1"
-  dependencies:
-    ramda "^0.25.0"
-
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -992,6 +986,10 @@ pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
 
+patchinko@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/patchinko/-/patchinko-4.1.0.tgz#c4c58644503afda74a404fe9694b9bc5af57a0ae"
+
 path-dirname@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/path-dirname/-/path-dirname-1.0.2.tgz#cc33d24d525e099a5388c0336c6e32b9160609e0"
@@ -1011,10 +1009,6 @@ posix-character-classes@^0.1.0:
 process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
-
-ramda@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
 
 rc@^1.2.7:
   version "1.2.8"

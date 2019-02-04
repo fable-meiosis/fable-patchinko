@@ -1,23 +1,50 @@
+// ts2fable 0.6.1
 module rec Patchinko
-
 open System
 open Fable.Core
 open Fable.Import.JS
 
-type IResult<'T1> =
-    interface end
+let [<Import("constant","module")>] constant: Constant.IExports = jsNative
+let [<Import("D","module")>] d: D.IExports = jsNative
+let [<Import("immutable","module")>] immutable: Immutable.IExports = jsNative
+let [<Import("P","module")>] p: P.IExports = jsNative
+let [<Import("PS","module")>] pS: PS.IExports = jsNative
+let [<Import("S","module")>] s: S.IExports = jsNative
 
-type P =
-    [<Emit "$0($1...)">] abstract Invoke: pFn: ('T1 -> 'T2 -> 'R) * s1: 'T1 * s2: IResult<'T2> -> IResult<'R>
-    [<Emit "$0($1...)">] abstract Invoke: pFn: ('T1 -> 'T2 -> 'T3 -> 'R) * s1: IResult<'T1> * s2: IResult<'T2> * s3: IResult<'T3> -> IResult<'R>
-    [<Emit "$0($1...)">] abstract Invoke: pFn: ('T1 -> 'T2 -> 'T3 -> 'T4 -> 'R) * s1: IResult<'T1> * s2: IResult<'T2> * s3: IResult<'T3> * s4: IResult<'T4> -> IResult<'R>
-    [<Emit "$0($1...)">] abstract Invoke: pFn: (ResizeArray<obj option> -> 'T) * [<ParamArray>] streams: ResizeArray<IResult<obj option>> -> IResult<'T>
+type [<AllowNullLiteral>] IExports =
+    abstract D: unit -> unit
+    abstract P: target: obj option * [<ParamArray>] args: ResizeArray<obj option> -> obj option
+    abstract PS: target: obj option * input: obj option * [<ParamArray>] args: ResizeArray<obj option> -> obj option
+    abstract S: closure: obj option -> obj option
+    abstract constant: a: obj option * b: obj option * [<ParamArray>] args: ResizeArray<obj option> -> obj option
+    abstract immutable: a: obj option * b: obj option * [<ParamArray>] args: ResizeArray<obj option> -> obj option
 
-type S = P
-type PS = P
-type D = P
+module D =
 
-let [<Import("*","module")>] ``patchinko/explicit/P``: P = jsNative
-let [<Import("*","module")>] ``patchinko/explicit/S``: S = jsNative
-let [<Import("*","module")>] ``patchinko/explicit/PS``:PS = jsNative
-let [<Import("*","module")>] ``patchinko/explicit/D``: D = jsNative
+    type [<AllowNullLiteral>] IExports =
+        abstract prototype: obj
+
+module P =
+
+    type [<AllowNullLiteral>] IExports =
+        abstract prototype: obj
+
+module PS =
+
+    type [<AllowNullLiteral>] IExports =
+        abstract prototype: obj
+
+module S =
+
+    type [<AllowNullLiteral>] IExports =
+        abstract prototype: obj
+
+module Constant =
+
+    type [<AllowNullLiteral>] IExports =
+        abstract prototype: obj
+
+module Immutable =
+
+    type [<AllowNullLiteral>] IExports =
+        abstract prototype: obj

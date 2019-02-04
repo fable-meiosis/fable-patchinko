@@ -14,7 +14,7 @@ WIP: Not yet tested
 
 This example aims to showcase how to create custom Fable bindings for JS libraries.
 
-The bindings in `Patchinko.fs` were created manually.
+The bindings in `Patchinko.fs` were created using `patchinko.d.ts`, created from the patchinko module using [dts](https://github.com/Microsoft/dts-gen#how-do-i-use-it) CLI.
 
 Checkout other sample apps at [fable2-samples](https://github.com/fable2-samples)
 
